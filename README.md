@@ -6,9 +6,9 @@ Objectives:
 2. User Crud - create, edit, delete User Profile.
 3. Deployed 
 
-User Stories:
+<h2> User Stories </h2>
 
-Users
+<h3> Users </h3>
 
 As a user, 
 So that I can use the application,
@@ -26,7 +26,7 @@ As a user,
 So that I can see my account, 
 I want to be able to read my account. 
 
-Posts
+<h3> Posts </h3>
 
 As a user, 
 So that I can use the application,
