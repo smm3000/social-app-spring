@@ -1,26 +1,27 @@
 package social.app.smbc.demo;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-@RequiredArgsConstructor
 public class UserService {
 
-    private final UserRepository userRepository;
+    @Autowired
+    private static UserRepository userRepository;
+
+    public UserService() {
+        this.userRepository = userRepository;
+    }
 
     public String getUser() {
         return "User-test";
     }
 
-    public Optional<User> getUserById(Long id) {
-
-        return userRepository.findById(id);
+    public User getUserById(Long id) {
+        return userRepository.findById(id).get();
     }
 
     public List<User> getAllUsers() {

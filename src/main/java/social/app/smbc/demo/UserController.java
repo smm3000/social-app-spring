@@ -1,27 +1,29 @@
 package social.app.smbc.demo;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/users")
-@RequiredArgsConstructor
 public class UserController {
 
+    @Autowired
     private final UserService userService;
 
-    @GetMapping
-    @ResponseStatus(HttpStatus.OK)
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
+
+    @GetMapping("/users")
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
-    @GetMapping("/{id}")
-    @ResponseStatus(HttpStatus.OK)
-    Optional<User> user(@PathVariable Long id) {
+    @GetMapping("/users/{id}")
+    User user(@PathVariable Long id) {
         return userService.getUserById(id);
     }
 }
