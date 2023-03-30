@@ -6,7 +6,7 @@ Objectives:
 2. User Crud - create, edit, delete User Profile.
 3. Deployed 
 
-<h2> User Stories </h2>
+<h2> User Stories Application </h2>
 
 <h3> Users </h3>
 
@@ -43,3 +43,8 @@ I want to be able to delete my posts.
 As a user, 
 So that I can see my posts, 
 I want to be able to read my posts. 
+
+<h3> Deployment <h3>
+
+Application deployment decision to be made: 
+Potentially using AWS
