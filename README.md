@@ -44,7 +44,7 @@ As a user,
 So that I can see my posts, 
 I want to be able to read my posts. 
 
-<h3> Deployment <h3>
+<h3> Deployment </h3>
 
 Application deployment decision to be made: 
 Potentially using AWS
